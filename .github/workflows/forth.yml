@@ -17,6 +17,6 @@ jobs :
     steps :
       - name : Execute second Linux Command
         run : |
-          hostname -l
+          hostname -i
           echo " I have checked hostname of the server"
 
