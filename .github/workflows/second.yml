@@ -1,0 +1,21 @@
+---
+
+#keys are in blue and given by Github actions, you cant change them
+name : Run Linux Commands
+
+#on what event we have to run workflow 
+on : workflow_dispatch 
+jobs : 
+  job1 : MyFirstJob
+    runs-on : ubuntu-latest
+    steps :
+      - name : Execute Linux Command
+        run : echo "Hello World !"
+
+  job2 : MySecondJob
+    runs-on : ubuntu-24.04
+    steps :
+      - name : Execute second Linux Command
+        run : |
+          hostname -l
+          echo " I have checked hostname of the server"
